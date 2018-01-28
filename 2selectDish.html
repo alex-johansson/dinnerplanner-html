@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+	<div class="row">
+  	<div class="col-sm-12">
+  		<div id="header">
+    		<h1>Dinner Planner</h1>
+  		</div>
+  	</div>
+  </div>
+
+  <div id="LeftNavBar"> 
+  
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12"> 
+          <h1>My Dinner</h1><br> 
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-12"> 
+      <div class="row">
+        <div class="col-md-12">   
+          <div class="col-md-8">
+            <p>People</p>
+            <div id="numberOfGuests">1</div>
+            <br>
+          </div>
+          <div class="col-md-4">  
+            <div class="row">
+              <div class="col-md-12">
+              <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+              <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">   
+        <div class="col-md-8">
+          <p>Dishname</p>
+          <div id="dishname">
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">    
+          <p>Cost</p><span id="cost"></span><span id="totalMenuPrice"></span></p><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12"> 
+        <div class="col-md-8">
+        <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div id="vitruta">
+    <h2>Select Dish</h2>
+    <div class="input-group">
+      <input id="searchvalue" type="text" class="form-control" placeholder="Enter key words">
+      <span class="input-group-btn">
+        <button id="search" class="btn btn-default" type="button">Search</button>
+      </span>
+      <div class="col-xs-5">
+        <select id="coursebutton" class="form-control">
+          <option data-type="starter" selected="">Starter</option>
+          <option data-type="main dish" selected="">Main</option>
+          <option data-type="dessert" selected="">Dessert</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="dishesview">
+    <li id="list" style="display:inline-block;width:200px;height:200px;">
+      <div id="200"><img style="width:150px;height:150px;" src="images/icecream.jpg" alt="icecream.jpg"><br>Chocolat Ice cream</div></li><li id="list" style="display:inline-block;width:200px;height:200px;">
+      <div id="201"><img style="width:150px;height:150px;" src="images/icecream.jpg" alt="icecream.jpg"><br>Vanilla Ice cream</div></li><li id="list" style="display:inline-block;width:200px;height:200px;">
+      <div id="202"><img style="width:150px;height:150px;" src="images/icecream.jpg" alt="icecream.jpg"><br>Strawberry</div></li>
+  </div> 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<!-- TODO: Here you should include JS code for your other views -->
+  </body>
+</html>

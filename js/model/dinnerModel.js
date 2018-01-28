@@ -3,45 +3,80 @@ var DinnerModel = function() {
  
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
+	var numberOfGuests = 2;
+	var selectedDishes = [];
 
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 1
+		if (num > 0) {
+			numberOfGuests = num;
+		}
 	}
 	
 	this.getNumberOfGuests = function() {
 		//TODO Lab 1
+		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 1
+		for (key in selectedDishes){
+			if (selectedDishes[key].type == type){
+				return selectedDishes[key];
+			}
+		}
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 1
+		return selectedDishes;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 1
+		for (key in selectedDishes){
+			for (i in selectedDishes[key].ingredients){
+				return i;
+			}
+		}
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 1
+		var totalPrice = 0;
+		for (i in getAllIngredients()){
+			totalPrice =+ getAllIngredients()[i].price;
+		}
+		totalPrice = totalPrice * getNumberOfGuests();
+		return totalPrice
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 1 
+		//TODO Lab 1
+		var dish = getDish(id);
+		for (key in selectedDishes){
+			if (selectedDishes[key].type == dish.type){
+				removeDishFromMenu(selectedDishes[key].id);
+			}
+		}
+		selectedDishes.push(dish)
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 1
+		for (key in selectedDishes){
+			if (selectedDishes[key].id == id){
+				selectedDishes.splice(key, 1);
+			}
+		}
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")

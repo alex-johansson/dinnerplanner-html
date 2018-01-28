@@ -1,0 +1,78 @@
+body {
+    padding-top: 0px;
+    overflow: hidden;
+}
+
+#header {
+    background-color:black;
+    opacity: 0.65;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;
+    text-align:center;
+    width: 100%;
+    padding: 10px;
+  }
+
+#LeftNavBar {
+    line-height:30px;
+
+    color:white; 
+    font-family: "Century gothic", century, sans-serif;
+    background-color:black; opacity: 0.45;
+    height:100%;
+    width:25%;
+    float:left;
+    padding:0%; 
+    }
+
+#vitruta {
+    line-height:30px;
+    background-color:white; opacity: 0.75; 
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:75%;
+    float:right;
+    padding:15px; 
+    height: 5%;   
+    }
+
+#dishesview{
+    float:left;
+    padding:15px; 
+    }
+
+
+#DishDetailsScreen{
+    float:right;
+    color:white;
+    width:70%;
+    padding:15px;
+}
+#imagetext{
+    float:left;
+    width:50%;
+}
+
+#ingred {
+    float:left;
+    background-color:black;
+    opacity: 0.75;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;   
+    width:50%;
+    padding:10px;    
+}
+
+ #goback {     
+    line-height:30px;
+    background-color:white; opacity: 0.75;
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:75%;
+    float:right;
+    padding:15px;    
+}
+    #menuView {
+    color: white;
+}
+
